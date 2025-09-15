@@ -1,4 +1,4 @@
-# Kubernetes Cluster Environment Setup
+# Kubernetes Cluster & Local Registry Environment Setup
 
 This document explains how to set up the environment for experiments, including:
 
