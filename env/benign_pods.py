@@ -230,7 +230,7 @@ actual_node_labels = {
     "k8s-worker40": {"memory": "4", "cpu-type": "amd64", "gpu-type": "amd-radeon", "storage-type": "nvme"}
 }
 
-# local registry url
+# registry URL, replace <LOCAL_REGISTRY> with the IP or hostname of your local registry server
 url = "Replace it with your URL:5000"
 
 
