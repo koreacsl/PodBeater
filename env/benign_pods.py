@@ -701,8 +701,6 @@ for service, config in services.items():
         #
         # node_affinity = generate_random_node_affinity(actual_node_labels, required_count=1)
         # pod_manifest = create_pod_manifest_with_affinity(pod_name, pod_affinity, node_affinity, config["versions"], service)
-        
-        
         # =====================================
 
 
