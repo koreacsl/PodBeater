@@ -43,7 +43,7 @@ node_labels["k8s-worker38"]="memory=6 cpu-type=arm32 gpu-type=amd-rdnd storage-t
 node_labels["k8s-worker39"]="memory=3 cpu-type=mips32 gpu-type=amd-rdnd storage-type=sshd"
 node_labels["k8s-worker40"]="memory=4 cpu-type=amd64 gpu-type=amd-radeon storage-type=nvme"
 
-# 라벨 적용
+# apply node label
 for node in "${!node_labels[@]}"; do
     echo "Labeling $node with ${node_labels[$node]}"
     kubectl label nodes "$node" ${node_labels[$node]} --overwrite
