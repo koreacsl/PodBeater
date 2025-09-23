@@ -105,34 +105,37 @@ Use the Python scripts to generate Pod YAML manifests for different PodBeater st
 ```bash
 # For PodBeater_same and PodBeater_random (Tu)
 python3 initial_pods_Tu.py
-python3 benign_pods_Tu.py
+python3 benign_pods.py
 
 # For PodBeater_v3 and PodBeater_v5 (Tr)
-python3 benign_pods_Tr.py
+python3 benign_pods.py
 ```
 
 These scripts will generate YAML files for the corresponding benign pods.
 
 ### Notes on Pod Manifest Generation (Tr vs. Tu)
 
-When generating pod manifests, the handling of `pod_affinity` and `node_affinity` differs depending on the experiment type:
+- When generating pod manifests, the handling of `pod_affinity` and `node_affinity` differs depending on the experiment type.  
+- When switching to Tr tests, update the benign pod generator (e.g., `benign_pod.py`) to generate benign pods with only `podAffinity`.  
+- When switching to Tu tests, update the benign pod generator to generate benign pods with both `podAffinity` and `nodeAffinity` so the experiment environment matches the attacker’s expectation.
 
-- **Tr tests (PodBeater_v3 / PodBeater_v5):**
-  - Use only `pod_affinity`.
-  - Keep the following line active:
+
+1. **Tr tests (PodBeater_v3 / PodBeater_v5):**
+    - Use only `pod_affinity`.
+    - Generate benign pods using create_pod_manifest(...).
     ```python
+    # benign_pod.py
     pod_manifest = create_pod_manifest(pod_name, pod_affinity, config["versions"], service)
     ```
 
-- **Tu tests (PodBeater_same / PodBeater_random):**
-  - Use both `pod_affinity` and `node_affinity`.
-  - Comment out the above line, and instead uncomment:
+2. **Tu tests (PodBeater_same / PodBeater_random):**
+    - Use both `pod_affinity` and `node_affinity`.
+    - Generate benign pods using create_pod_manifest_with_affinity(...).
     ```python
+    # benign_pod.py
     node_affinity = generate_random_node_affinity(actual_node_labels, required_count=1)
     pod_manifest = create_pod_manifest_with_affinity(pod_name, pod_affinity, node_affinity, config["versions"], service)
     ```
-
-
 ---
 
 ## 5. Deploy Benign Pods
