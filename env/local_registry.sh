@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# ================================================================================================================================================
+# Docker Image Preparation Script for Local Registry
+#
+# Instruction:
+# - Modify the 'docker_services' list below to include the services and versions that you want to use in your experiment or deployment.
+# - This script will:
+#     1. Pull images from Docker Hub
+#     2. Retag them for the local registry
+#     3. Push them to your local registry
+#
+# - Replace <LOCAL_REGISTRY> with the IP or hostname of your local registry server.
+# ================================================================================================================================================
+
 # Define the docker services with images and versions
 declare -A docker_services
 
