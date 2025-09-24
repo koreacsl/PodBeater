@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# ================================================
+# Node Labeling Script for Kubernetes Cluster
+#
+# - Modify the label values (memory, cpu-type, gpu-type, storage-type, etc.)
+#   according to the actual specifications of your cluster nodes.
+# - Each key in 'node_labels' should match the node name in your cluster.
+# - Run this script to apply or overwrite labels for all nodes.
+# ================================================
+
+
 declare -A node_labels
 
 node_labels["k8s-worker1"]="memory=6 cpu-type=mips64 gpu-type=nvidia-tesla storage-type=sshd"
@@ -43,7 +53,7 @@ node_labels["k8s-worker38"]="memory=6 cpu-type=arm32 gpu-type=amd-rdnd storage-t
 node_labels["k8s-worker39"]="memory=3 cpu-type=mips32 gpu-type=amd-rdnd storage-type=sshd"
 node_labels["k8s-worker40"]="memory=4 cpu-type=amd64 gpu-type=amd-radeon storage-type=nvme"
 
-# apply node label
+# apply labels to each node
 for node in "${!node_labels[@]}"; do
     echo "Labeling $node with ${node_labels[$node]}"
     kubectl label nodes "$node" ${node_labels[$node]} --overwrite
