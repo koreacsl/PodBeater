@@ -3,9 +3,24 @@ import os
 import yaml
 import string
 
-# output directory
-output_dir = "benign_pods"
-os.makedirs(output_dir, exist_ok=True)
+# ====================================================================================================================================================================================
+# Pod Manifest Generator Script for Kubernetes Cluster
+#
+# Instruction:
+# - Replace the "services" dictionary with the actual images you have pushed to your local registry.
+#   (e.g., {"nginx": {"image_prefix": "nginx", "versions": [...], ...}})
+#
+# - Replace the "pod_affinity_data" dictionary with the key-value pairs used to generate pod affinity.
+#   Example: {"environment": ["production", "staging", ...], "tier": [...]}
+#
+# - Replace the "actual_node_labels" dictionary with the real node labels applied in your cluster. 
+# - The keys must match the node names (e.g., "k8s-worker1"), and the label values reflect the resources of each node or can be customized arbitrarily.
+#
+# - Update the "url" variable with the hostname or IP address of your local registry.
+#
+# - After customizing, run this script to generate random initial Pod manifests for experiments.
+# ====================================================================================================================================================================================
+
 
 # docker services
 services = {
@@ -232,6 +247,11 @@ actual_node_labels = {
 
 # registry URL, replace <LOCAL_REGISTRY> with the IP or hostname of your local registry server
 url = "Replace it with your URL:5000"
+
+
+# output directory
+output_dir = "benign_pods"
+os.makedirs(output_dir, exist_ok=True)
 
 
 def generate_random_string(length=5):
