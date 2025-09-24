@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# ================================================================================================================================================
+# ===========================================================================================================================================================================
 # Node Labeling Script for Kubernetes Cluster
 #
 # Instruction:
-# - Modify the label values (memory, cpu-type, gpu-type, storage-type, etc.) according to the actual specifications of your cluster nodes.
+# - Modify the label values (memory, cpu-type, gpu-type, storage-type, etc.) according to the actual specifications of your cluster nodes or can be customized arbitrarily.
 # - Each key in 'node_labels' should match the node name in your cluster.
 # - Run this script to apply or overwrite labels for all nodes.
-# ================================================================================================================================================
+# ===========================================================================================================================================================================
 
 
 declare -A node_labels
