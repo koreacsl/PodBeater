@@ -72,10 +72,10 @@ In this scenario, the attacker has no knowledge of the victim pod’s requiremen
 <!-- end list -->
 
 ```bash
-# PodBeater_v3 behavior (3 multi-value)
+# PodBeater_v3 behavior
 python3 PodBeater_Tr.py --multi-value 3 --out-dir attack_pods_v3
 
-# PodBeater_v5 behavior (multi-value = 5)
+# PodBeater_v5 behavior 
 python3 PodBeater_Tr.py --multi-value 5 --out-dir attack_pods_v5
 ```
 
