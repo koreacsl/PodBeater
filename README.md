@@ -2,6 +2,12 @@
 
 This document outlines the procedure for measuring the **attack cost** against various threat models using the **PodBeater** attack in a **Kubernetes cluster**.
 
+## More Details 
+WISA 2025 : You can find a preprint version of the paper [here](https://github.com/koreacsl/PodBeater/blob/main/PodBeater_Exploiting_Multi-Value_Affinity_for_Efficient_Co-Location_Attacks_in_Kubernetes.pdf). 
+(The official proceedings link will be added once available.) 
+
+-----
+
 ## 1. Kubernetes Cluster Setup
 The tests will be conducted on two different cluster sizes. All nodes will use **containerd** as their container runtime.
 
