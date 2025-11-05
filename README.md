@@ -4,6 +4,7 @@ This document outlines the procedure for measuring the **attack cost** against v
 
 ## More Details 
 WISA 2025 : You can find a preprint version of the paper [here](https://github.com/koreacsl/PodBeater/blob/main/PodBeater_Exploiting_Multi-Value_Affinity_for_Efficient_Co-Location_Attacks_in_Kubernetes.pdf). 
+
 (The official proceedings link will be added once available.) 
 
 -----
