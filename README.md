@@ -1,4 +1,5 @@
 # 🧹 PodBeater: Exploiting Multi-Value Aﬃnity for Eﬃcient Co-Location Attacks in Kubernetes
+PodBeater exploits multi-value affinity in Kubernetes to increase the probability of co-location with a victim pod. With this approach,, it reduces the number of attack pods and the time required to achieve co-location compared to previous work and the single-value strategy.
 
 This document outlines the procedure for measuring the **attack cost** against various threat models using the **PodBeater** attack in a **Kubernetes cluster**.
 
@@ -24,28 +25,6 @@ You'll need to set up the environment as described in the `env/` folder.
 
 The following description outlines only the basic steps; for detailed setup instructions, please refer to the `README.md` file in the `/env` folder.
 
-### 2.1. Local Registry Setup
-To provide the required images for deploying attack and benign pods, set up a local registry within the cluster.
-
-```bash
-docker run -d -p 5000:5000 --restart=always --name registry registry:2
-````
-
-### 2.2. Node Labeling
-
-Label each node with a specific node label.
-
-```bash
-./node_label
-```
-
-### 2.3. Benign Pod Deployment
-
-Deploy benign pods that will serve as targets. Deploy multiple pods so you can select a specific one or a random one to attack.
-
-```bash
-kubectl apply -f <benign pods directory>
-```
 
 -----
 
