@@ -1,4 +1,4 @@
-# 🧹 PodBeater: Exploiting Multi-Value Aﬃnity for Eﬃcient Co-Location Attacks in Kubernetes
+# PodBeater: Exploiting Multi-Value Aﬃnity for Eﬃcient Co-Location Attacks in Kubernetes
 PodBeater exploits *multi-value affinity* in Kubernetes to increase the probability of co-location with a victim pod. With this approach, it reduces the number of attack pods and the time required to achieve co-location compared to previous work and the single-value strategy.
 
 This document outlines the procedure for measuring the **attack cost** against various threat models using the **PodBeater** in a **Kubernetes cluster**.
@@ -12,7 +12,7 @@ WISA 2025 : You can find a preprint version of the paper [here](https://github.c
 
 -----
 
-## 🛠️ 1. Kubernetes Cluster Setup
+## 🛠️ Step 1. Kubernetes Cluster Setup
 The tests will be conducted on two different cluster sizes. All nodes will use **containerd** as their container runtime.
 
 - **Small-scale Cluster**: 1 master node, 20 worker nodes
@@ -20,7 +20,7 @@ The tests will be conducted on two different cluster sizes. All nodes will use *
 
 -----
 
-## ⚙️ 2. Environment Configuration
+## ⚙️ Step 2. Environment Configuration
 You'll need to set up the environment as described in the `env/` folder.
 
 The following description outlines only the basic steps; for detailed setup instructions, please refer to the `README.md` file in the `/env` folder.
@@ -28,7 +28,7 @@ The following description outlines only the basic steps; for detailed setup inst
 
 -----
 
-## 🕹️ 3. Generating and Deploying Attack Pods by Threat Model
+## 🕹️ Stpe 3. Generating and Deploying Attack Pods by Threat Model
 
 Run the script to create attack pods according to two threat models: **Tu** and **Tr**.
 
@@ -71,7 +71,7 @@ python3 PodBeater_Tr.py --multi-value 5 --out-dir attack_pods_v5
 
 -----
 
-## 🧭 4. Measuring Attack Cost
+## 🧭 Step 4. Measuring Attack Cost
 
 ### 4.1. Target Selection
 
