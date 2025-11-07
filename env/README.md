@@ -1,4 +1,4 @@
-# Kubernetes Cluster & Local Registry Environment Setup
+# 🛠️ Kubernetes Cluster & Local Registry Environment Setup
 
 This document explains how to set up the environment for experiments, including:
 
@@ -10,7 +10,7 @@ This document explains how to set up the environment for experiments, including:
 
 ---
 
-## 1. Set up a Local Registry
+## ⚙️ 1. Set up a Local Registry
 
 Run a local registry using Podman:
 
@@ -76,7 +76,7 @@ sudo systemctl restart containerd
 
 ---
 
-## 2. Save Docker Images into the Local Registry
+## 🐳 2. Save Docker Images into the Local Registry
 
 After the local registry is ready, run the script:
 
@@ -88,7 +88,7 @@ This script pushes the required Docker images into your local registry.
 
 ---
 
-## 3. Label Kubernetes Cluster Nodes
+## 🏷️ 3. Label Kubernetes Cluster Nodes
 
 Run the following script to add labels to nodes in the Kubernetes cluster:
 
@@ -98,7 +98,7 @@ Run the following script to add labels to nodes in the Kubernetes cluster:
 
 ---
 
-## 4. Generate Pod YAML Files
+## 🗂️ 4. Generate Pod YAML Files
 
 Use the Python scripts to generate Pod YAML manifests for different PodBeater strategies:
 
@@ -113,7 +113,7 @@ python3 benign_pods.py
 
 These scripts will generate YAML files for the corresponding benign pods.
 
-### Notes on Pod Manifest Generation (Tr vs. Tu)
+### 💡 Notes on Pod Manifest Generation (Tr vs. Tu)
 
 - When generating pod manifests, the handling of `pod_affinity` and `node_affinity` differs depending on the experiment type.  
 - When switching to Tr tests, update the benign pod generator (e.g., `benign_pod.py`) to generate benign pods with only `podAffinity`.  
@@ -138,7 +138,7 @@ These scripts will generate YAML files for the corresponding benign pods.
     ```
 ---
 
-## 5. Deploy Benign Pods
+## 🚀 5. Deploy Benign Pods
 
 Apply the generated pod YAML files to your Kubernetes cluster:
 
@@ -147,7 +147,7 @@ Apply the generated pod YAML files to your Kubernetes cluster:
 kubectl apply -f <path/to/generated/yaml/or/directory>
 ```
 
-### Notes on PodBeater Environment Setup Order (Tr vs. Tu)
+### 💡 Notes on PodBeater Environment Setup Order (Tr vs. Tu)
 
 The deployment order of pods differs depending on the experiment type:
 
