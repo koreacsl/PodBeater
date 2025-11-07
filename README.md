@@ -13,7 +13,8 @@ WISA 2025 : You can find a preprint version of the paper [here](https://github.c
 -----
 
 ## 🛠️ Step 1. Kubernetes Cluster Setup
-The tests will be conducted on two different cluster sizes. All nodes will use **containerd** as their container runtime.
+Set up a Kubernetes cluster that uses containerd as the **container** runtime.
+The experiments were conducted on two different cluster sizes.
 
 - **Small-scale Cluster**: 1 master node, 20 worker nodes
 - **Large-scale Cluster**: 1 master node, 40 worker nodes
@@ -21,10 +22,7 @@ The tests will be conducted on two different cluster sizes. All nodes will use *
 -----
 
 ## ⚙️ Step 2. Environment Configuration
-You'll need to set up the environment as described in the `env/` folder.
-
-The following description outlines only the basic steps; for detailed setup instructions, please refer to the `README.md` file in the `/env` folder.
-
+You'll need to set up the local registry on the cluster as described in the `env/` folder.
 
 -----
 
