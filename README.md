@@ -1,5 +1,5 @@
 # 🧹 PodBeater: Exploiting Multi-Value Aﬃnity for Eﬃcient Co-Location Attacks in Kubernetes
-PodBeater exploits multi-value affinity in Kubernetes to increase the probability of co-location with a victim pod. With this approach,, it reduces the number of attack pods and the time required to achieve co-location compared to previous work and the single-value strategy.
+PodBeater exploits *multi-value affinity* in Kubernetes to increase the probability of co-location with a victim pod. With this approach, it reduces the number of attack pods and the time required to achieve co-location compared to previous work and the single-value strategy.
 
 This document outlines the procedure for measuring the **attack cost** against various threat models using the **PodBeater** attack in a **Kubernetes cluster**.
 
