@@ -1,4 +1,4 @@
-# 🛠️ Kubernetes Cluster & Local Registry Environment Setup
+# 🛠️ Local Registry Environment Setup on Kubernetes Cluster
 
 This document explains how to set up the environment for experiments, including:
 
