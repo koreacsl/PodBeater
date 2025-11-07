@@ -18,7 +18,7 @@ The tests will be conducted on two different cluster sizes. All nodes will use *
 -----
 
 ## 2. Environment Configuration
-You'll need to set up the environment as described in the `/env` folder.
+You'll need to set up the environment as described in the `env/` folder.
 
 The following description outlines only the basic steps; for detailed setup instructions, please refer to the `README.md` file in the `/env` folder.
 
@@ -51,6 +51,8 @@ kubectl apply -f <benign pods directory>
 
 Run the script to create attack pods according to two threat models: **Tu** and **Tr**.
 
+Each script is located in the `strategy/` folder.
+
 ### 3.1. Threat Model Tu
 
 In this scenario, the attacker does have knowledge of the victim pod’s scheduling requirements.
@@ -62,7 +64,7 @@ In this scenario, the attacker does have knowledge of the victim pod’s schedul
 <!-- end list -->
 
 ```bash
-# Generate PodBeater_same attack pods
+# Generate PodBeater_same attack pods 
 python3 PodBeater_same.py <path/to/target_pod_yaml> <path/to/attack_pod_yaml>
 
 # Generate PodBeater_random attack pods
