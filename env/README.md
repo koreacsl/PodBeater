@@ -1,6 +1,6 @@
 # 🛠️ Local Registry Environment Setup on Kubernetes Cluster
 
-This document explains how to set up the environment for experiments, including:
+This document explains how to set up the local registrt on Kubernetes cluseter for experiments:
 
 1. Setting up a **local registry** using Podman
 2. Saving Docker images to the local registry
