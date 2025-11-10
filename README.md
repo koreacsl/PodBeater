@@ -1,6 +1,6 @@
 # PodBeater: Exploiting Multi-Value Aﬃnity for Eﬃcient Co-Location Attacks in Kubernetes
 <p align="center">
-  <img width="483" height="445" alt="Image" src="https://github.com/user-attachments/assets/7de0850c-b2db-4010-b208-db17b39d142a" />
+  <img width="483" height="445" alt="Image" src="https://github.com/user-attachments/assets/22a93e2f-86d7-42d6-8c92-4ad6b6b93b11" />
 </p>
 
 
